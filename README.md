@@ -1,0 +1,9 @@
+* https://webmayak.github.io/linen/
+* https://webmayak.github.io/linen/account.html
+* https://webmayak.github.io/linen/blog.html
+* https://webmayak.github.io/linen/cart.html
+* https://webmayak.github.io/linen/catalog.html
+* https://webmayak.github.io/linen/contacts.html
+* https://webmayak.github.io/linen/order.html
+* https://webmayak.github.io/linen/product.html
+* https://webmayak.github.io/linen/register.html
