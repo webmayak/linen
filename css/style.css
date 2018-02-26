@@ -1429,3 +1429,25 @@ select.form-control option,
 	font-family: 'exo';
 	font-size: 16px
 }
+
+.top_menu>ul>li.active>a:after, .top_menu .stickUpHolder>ul>li.active>a:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    right: 3px;
+    bottom: 0;
+    height: 2px;
+    background: #ffc900;
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+
+@media only screen and (min-width: 992px) {
+	.pb-left-column #image-block {
+	    width: 500px;
+	}
+}
+
+.pb-left-column #image-block img {
+	width: auto;
+}
