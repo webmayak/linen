@@ -58,6 +58,7 @@
     <link rel="stylesheet" href="./css/modules/tmmediaparallax/views/css/tmmediaparallax.css" media="all" />
     <link rel="stylesheet" href="./css/modules/tmmediaparallax/views/css/rd-parallax.css" media="all" />
     <link rel="stylesheet" href="./js/jquery/plugins/jqzoom/jquery.jqzoom.css" media="all" />
+    <link rel="stylesheet" href="./css/product.css" media="all" />
     <link rel="stylesheet" href="./css/style.css" media="all" />
     <script src="./js/jquery/jquery-1.11.0.min.js"></script>
     <script src="./js/jquery/jquery-migrate-1.2.1.min.js"></script>
@@ -67,7 +68,6 @@
     <script src="./js/autoload/10-bootstrap.min.js"></script>
     <script src="./js/autoload/14-device.min.js"></script>
     <script src="./js/autoload/15-jquery.total-storage.min.js"></script>
-    <script src="./js/autoload/15-jquery.uniform-modified.js"></script>
     <script src="./js/autoload/16-jquery.scrollmagic.min.js"></script>
     <script src="./js/autoload/17-jquery.scrollmagic.debug.js"></script>
     <script src="./js/autoload/18-TimelineMax.min.js"></script>
@@ -83,7 +83,6 @@
     <script src="./js/jquery/ui/jquery.ui.widget.min.js"></script>
     <script src="./js/jquery/ui/jquery.ui.mouse.min.js"></script>
     <script src="./js/jquery/ui/jquery.ui.slider.min.js"></script>
-    <script src="./js/jquery/plugins/jqzoom/jquery.jqzoom.js"></script>
     <script src="./js/tools/treeManagement.js"></script>
     <script src="./js/modules/blocknewsletter/blocknewsletter.js"></script>
     <script src="./js/modules/homeslider/js/homeslider.js"></script>
@@ -103,11 +102,12 @@
     <script src="./js/modules/tmmediaparallax/views/js/jquery.youtubebackground.js"></script>
     <script src="./js/modules/tmmediaparallax/views/js/jquery.vide.min.js"></script>
     <script src="./js/modules/tmmediaparallax/views/js/tmmediaparallax.js"></script>
-    <script src="./js/modules/blocklayered/blocklayered.js"></script>
+    <script src="./js/product.js"></script>
     <script src="./js/category.js"></script>
     <script src="./js/index.js"></script>              
     <script>
 var CUSTOMIZE_TEXTFIELD = 1;
+var jqZoomEnabled = false;
 var FancyboxI18nClose = 'Закрыть';
 var FancyboxI18nNext = 'Вперед';
 var FancyboxI18nPrev = 'Назад';
@@ -622,7 +622,7 @@ var wishlistProductsIds = false;
                                   </svg>
                                 </span>
                                 </a>
-                                    <a class="quick-view" href="javascript:void(0)" data-href="javascript:void(0)">
+                                    <a class="quick-view" data-href="#product-modal">
                                     <span>Быстрый просмотр</span>
                                     </a>
                                     <a itemprop="url" class="lnk_view btn btn-default" href="javascript:void(0)" title="См.">
@@ -678,7 +678,7 @@ var wishlistProductsIds = false;
                                  <img class="img-responsive hover-image" src="https://ld-prestashop.template-help.com/prestashop_58978/img/p/3/1/31-home_default.jpg" alt="Luxury Embroidery Comforter Set Bed-in-a-bag" title="Luxury Embroidery Comforter Set Bed-in-a-bag" />
                                  </a>
                                  <div class="button-container">
-                                    <a class="quick-view" href="javascript:void(0)" data-href="javascript:void(0)">
+                                    <a class="quick-view" data-href="#product-modal">
                                     <span>Быстрый просмотр</span>
                                     </a>
                                     <a itemprop="url" class="lnk_view btn btn-default" href="javascript:void(0)" title="См.">
@@ -746,7 +746,7 @@ var wishlistProductsIds = false;
                                   </svg>
                                 </span>
                                 </a>
-                                    <a class="quick-view" href="javascript:void(0)" data-href="javascript:void(0)">
+                                    <a class="quick-view" data-href="#product-modal">
                                     <span>Быстрый просмотр</span>
                                     </a>
                                     <a itemprop="url" class="lnk_view btn btn-default" href="javascript:void(0)" title="См.">
@@ -825,7 +825,7 @@ var wishlistProductsIds = false;
                                   </svg>
                                 </span>
                                 </a>
-                                    <a class="quick-view" href="javascript:void(0)" data-href="javascript:void(0)">
+                                    <a class="quick-view" data-href="#product-modal">
                                     <span>Быстрый просмотр</span>
                                     </a>
                                     <a itemprop="url" class="lnk_view btn btn-default" href="javascript:void(0)" title="См.">
@@ -901,7 +901,7 @@ var wishlistProductsIds = false;
                                   </svg>
                                 </span>
                                 </a>
-                                    <a class="quick-view" href="javascript:void(0)" data-href="javascript:void(0)">
+                                    <a class="quick-view" data-href="#product-modal">
                                     <span>Быстрый просмотр</span>
                                     </a>
                                     <a itemprop="url" class="lnk_view btn btn-default" href="javascript:void(0)" title="См.">
@@ -977,7 +977,7 @@ var wishlistProductsIds = false;
                                   </svg>
                                 </span>
                                 </a>
-                                    <a class="quick-view" href="javascript:void(0)" data-href="javascript:void(0)">
+                                    <a class="quick-view" data-href="#product-modal">
                                     <span>Быстрый просмотр</span>
                                     </a>
                                     <a itemprop="url" class="lnk_view btn btn-default" href="javascript:void(0)" title="См.">
@@ -1057,7 +1057,7 @@ var wishlistProductsIds = false;
                                   </svg>
                                 </span>
                                 </a>
-                                    <a class="quick-view" href="javascript:void(0)" data-href="javascript:void(0)">
+                                    <a class="quick-view" data-href="#product-modal">
                                     <span>Быстрый просмотр</span>
                                     </a>
                                     <a itemprop="url" class="lnk_view btn btn-default" href="javascript:void(0)" title="См.">
@@ -1128,7 +1128,7 @@ var wishlistProductsIds = false;
                                   </svg>
                                 </span>
                                 </a>
-                                    <a class="quick-view" href="javascript:void(0)" data-href="javascript:void(0)">
+                                    <a class="quick-view" data-href="#product-modal">
                                     <span>Быстрый просмотр</span>
                                     </a>
                                     <a itemprop="url" class="lnk_view btn btn-default" href="javascript:void(0)" title="См.">
@@ -1202,7 +1202,7 @@ var wishlistProductsIds = false;
                                   </svg>
                                 </span>
                                 </a>
-                                    <a class="quick-view" href="javascript:void(0)" data-href="javascript:void(0)">
+                                    <a class="quick-view" data-href="#product-modal">
                                     <span>Быстрый просмотр</span>
                                     </a>
                                     <a itemprop="url" class="lnk_view btn btn-default" href="javascript:void(0)" title="См.">
@@ -1281,7 +1281,7 @@ var wishlistProductsIds = false;
                                   </svg>
                                 </span>
                                 </a>
-                                    <a class="quick-view" href="javascript:void(0)" data-href="javascript:void(0)">
+                                    <a class="quick-view" data-href="#product-modal">
                                     <span>Быстрый просмотр</span>
                                     </a>
                                     <a itemprop="url" class="lnk_view btn btn-default" href="javascript:void(0)" title="См.">
@@ -1361,7 +1361,7 @@ var wishlistProductsIds = false;
                                   </svg>
                                 </span>
                                 </a>
-                                    <a class="quick-view" href="javascript:void(0)" data-href="javascript:void(0)">
+                                    <a class="quick-view" data-href="#product-modal">
                                     <span>Быстрый просмотр</span>
                                     </a>
                                     <a itemprop="url" class="lnk_view btn btn-default" href="javascript:void(0)" title="См.">
@@ -1437,7 +1437,7 @@ var wishlistProductsIds = false;
                                   </svg>
                                 </span>
                                 </a>
-                                    <a class="quick-view" href="javascript:void(0)" data-href="javascript:void(0)">
+                                    <a class="quick-view" data-href="#product-modal">
                                     <span>Быстрый просмотр</span>
                                     </a>
                                     <a itemprop="url" class="lnk_view btn btn-default" href="javascript:void(0)" title="См.">
@@ -1888,7 +1888,7 @@ var wishlistProductsIds = false;
         </div>
       </div>
     </div>
-        <div id="product-modal" class="content_only" style="display: none">
+    <div id="product-modal" class="content_only" style="display: none">
       <div class="primary_block row">
        <h1 itemprop="name" class="mobile-product-name">Borrego Comforter Set</h1>
        <div class="pb-left-column col-sm-6 col-md-6 col-lg-7">
@@ -1897,7 +1897,7 @@ var wishlistProductsIds = false;
           <div id="image-block" class="clearfix is_caroucel">
              <span id="view_full_size">
               <a href="javascript:void(0)">
-                <img id="bigpic" itemprop="image" src="https://ld-prestashop.template-help.com/prestashop_58978/img/p/3/6/36-tm_large_default.jpg" title="Borrego Comforter Set" alt="Borrego Comforter Set"/>
+                <img id="bigpic" itemprop="image" src="http://bitrix.edost.org/upload/iblock/fb4/fb4633d6167a22388dfd66bdeadc7b26.jpg" title="Borrego Comforter Set" alt="Borrego Comforter Set"/>
               </a>
              </span>
           </div>
@@ -1908,8 +1908,8 @@ var wishlistProductsIds = false;
              <div id="thumbs_list">
                 <ul id="thumbs_list_frame">
                   <li id="thumbnail_36">
-                    <a href="./img/36-tm_thickbox_default.jpg" data-fancybox-group="other-views" class="fancybox shown" title="Borrego Comforter Set">
-                      <img class="img-responsive" id="thumb_36" src="./img/36-tm_large_default.jpg" alt="Borrego Comforter Set" title="Borrego Comforter Set" height="80" width="80" itemprop="image">
+                    <a href="http://bitrix.edost.org/upload/iblock/fb4/fb4633d6167a22388dfd66bdeadc7b26.jpg" data-fancybox-group="other-views" class="fancybox shown" title="Borrego Comforter Set">
+                      <img class="img-responsive" id="thumb_36" src="http://bitrix.edost.org/upload/iblock/fb4/fb4633d6167a22388dfd66bdeadc7b26.jpg" alt="Borrego Comforter Set" title="Borrego Comforter Set" height="80" width="80" itemprop="image">
                     </a>
                   </li>
                   <li id="thumbnail_37">
@@ -2010,41 +2010,24 @@ var wishlistProductsIds = false;
                       <fieldset class="attribute_fieldset">
                          <label class="attribute_label" >Материал&nbsp;</label>
                          <div class="attribute_list">
-                            <ul>
-                               <li>
-                                  <input type="radio" class="attribute_radio" name="group_5" value="33"  checked="checked" />
-                                  <label>Шелк</label>
-                               </li>
-                               <li>
-                                  <input type="radio" class="attribute_radio" name="group_5" value="34"  />
-                                  <label>Вельвет</label>
-                               </li>
-                               <li>
-                                  <input type="radio" class="attribute_radio" name="group_5" value="35"  />
-                                  <label>Шерсть</label>
-                               </li>
-                            </ul>
+                          <select class="form-control">
+                           <option value="">Шелк</option>
+                           <option value="">Вельвет</option>
+                           <option value="">Шерсть</option>
+                         </select>
+                         </div>
+                      </fieldset>
+                      <fieldset class="attribute_fieldset">
+                        <label  class="attribute_label" for="quantity_wanted">Количество</label>
+                        <div class="attribute_list">
+                         <select class="quantity_wanted-select form-control">
+                           <option value="">1</option>
+                           <option value="">2</option>
+                           <option value="">3</option>
+                         </select>
                          </div>
                       </fieldset>
                    </div>
-                   <div class="clearfix">
-                      <p id="quantity_wanted_p">
-                         <label for="quantity_wanted">Количество</label>
-                         <input type="text" min="1" name="qty" id="quantity_wanted" class="text" value="1" />
-                         <span class="clearfix"></span>
-                      </p>
-                      <div class="box-cart-actions">
-                         <p class="buttons_bottom_block no-print">
-                            <a id="wishlist_button_nopop" href="javascript:void(0)" rel="nofollow" title="В избранное">
-                            Добавить в избранное
-                            </a>
-                         </p>
-                      </div>
-                   </div>
-                   <p id="minimal_quantity_wanted_p" style="display: none;">
-                      Минимальный заказ для товара 
-                      <b id="minimal_quantity_label">1</b>
-                   </p>
                 </div>
                 <div class="box-cart-bottom">
                    <div id="add_to_cart_product_page_button" >
