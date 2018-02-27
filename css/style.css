@@ -1451,3 +1451,17 @@ select.form-control option,
 .pb-left-column #image-block img {
 	width: auto;
 }
+
+.shopping_cart > a > .count {
+	position: absolute;
+    top: -2px;
+    right: -20px;
+    border-radius: 50%;
+    background-color: #ffc900;
+    width: 26px;
+    height: 26px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 4px;
+}
