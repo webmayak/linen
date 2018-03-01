@@ -1616,3 +1616,19 @@ select.form-control option,
 .zoomPad {
 	cursor: default
 }
+
+
+@media(min-width: 768px) {
+	.top_menu li li.active a, 
+	.top_menu .stickUpHolder li li.active a {
+		color: #000;
+	    text-decoration: underline;
+	}
+}
+
+@media(max-width: 767px) {
+	.top_menu>ul .is-megamenu ul.content>li.category ul li.active a,
+	.top_menu .stickUpHolder>ul .is-megamenu ul.content>li.category ul li.active a {
+		color: #000;
+	}
+}
