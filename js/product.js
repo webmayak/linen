@@ -75,11 +75,13 @@ $(document).ready(function() {
 
     if (typeof(jqZoomEnabled) !== 'undefined' && jqZoomEnabled) {
         if ($('#thumbs_list .shown img').length) {
+            $('.jqzoom').removeData('jqzoom');
             var new_src = $('#thumbs_list .shown img').attr('src').replace('cart_', 'large_');
             if ($('.jqzoom img').attr('src') != new_src) {
                 $('.jqzoom img').attr('src', new_src).parent().attr('href', new_src);
             }
         }
+
         $('.jqzoom').jqzoom({
             zoomType: 'innerzoom',
             zoomWidth: 458,
@@ -88,7 +90,11 @@ $(document).ready(function() {
             yOffset: 0,
             title: false
         });
+        $('.zoom_link').unbind();
+        $('.zoomPad').unbind();
+        $('.zoomPup').unbind();
     }
+
     if (typeof(contentOnly) !== 'undefined') {
         if (!contentOnly && !!$.prototype.fancybox) {
             $('li:visible .fancybox, .fancybox.shown').fancybox({
@@ -319,8 +325,8 @@ function displayImage(domAAroundImgThumb, no_animation) {
         var new_src = domAAroundImgThumb.attr('href').replace('thickbox', 'large');
         var new_title = domAAroundImgThumb.attr('title');
         var new_href = domAAroundImgThumb.attr('href');
-        if ($('#bigpic').attr('src') != new_src) {
-            $('#bigpic').attr({
+        if (domAAroundImgThumb.parents('.views_block').siblings('.image-block').find('.bigpic').attr('src') != new_src) {
+            domAAroundImgThumb.parents('.views_block').siblings('.image-block').find('.bigpic').attr({
                 'src': new_src,
                 'alt': new_title,
                 'title': new_title
